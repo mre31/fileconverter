@@ -8,9 +8,6 @@ A versatile web-based tool for converting image files between various formats, w
 *   **Quality Control:** Adjust the quality for lossy formats (JPEG, WebP, AVIF) to balance file size and visual fidelity.
 *   **ICO Generation:**
     *   Create a ZIP archive containing multiple `.ico` files, each generated from a different resolution of the source image.
-*   **Drag & Drop:** Easily upload files by dragging and dropping them onto the interface.
-*   **Client-Side Previews & Info:** See selected file name and size before conversion.
-*   **Responsive Design:** Usable across different screen sizes.
 
 ## Technologies Used
 
