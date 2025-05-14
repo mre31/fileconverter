@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 :root {
+  --background-custom: #18181b;
+  --card-background: #26272b;
+  --card-inner-background: #2f2f32;
+  --button-fill: #155dfc;
+  --text-color: #ffffff;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,3 +29,69 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom Animations from User Snippet */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-15px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  opacity: 0; /* Başlangıçta gizli */
+}
+
+.form-to-success-transition {
+  transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.success-view-animation-ready {
+  will-change: opacity, transform;
+}
+
+.slide-1 { animation-delay: 100ms; }
+.slide-2 { animation-delay: 250ms; }
+.slide-3 { animation-delay: 400ms; }
+.slide-3a { animation-delay: 475ms; }
+.slide-4 { animation-delay: 550ms; }
+.slide-5 { animation-delay: 700ms; }
+
+@keyframes slideInFromBottom {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.progress-container-enter {
+  animation: slideInFromBottom 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes progressShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.progress-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(59, 130, 246, 0.8) 0%, 
+    rgba(59, 130, 246, 1) 25%, 
+    rgba(59, 130, 246, 0.8) 50%, 
+    rgba(59, 130, 246, 1) 75%, 
+    rgba(59, 130, 246, 0.8) 100%
+  );
+  background-size: 200% 100%;
+  animation: progressShimmer 2s infinite linear;
+}
+/* End of Custom Animations */
